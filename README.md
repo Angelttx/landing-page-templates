@@ -31,3 +31,13 @@ MIT
 ---
 
 *For custom landing pages, contact me!*
+
+---
+
+## 💰 Support & Get Full Version
+
+This is the free version. Get the full version with more features:
+
+[Buy on Gumroad - 4](https://haualand.gumroad.com/l/landing-pages-pro)
+
+---

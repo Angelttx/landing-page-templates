@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<title>PixelCraft - Digital Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#2563eb;--pd:#1d4ed8;--d:#0f172a;--ds:#1e293b;--l:#f8fafc;--g:#94a3b8;--grn:#10b981;--o:#f97316}
+body{font-family:Inter,sans-serif;background:var(--d);color:var(--l);line-height:1.6}
+.bg{background:radial-gradient(ellipse at 20% 0%,rgba(37,99,235,.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(249,115,22,.1) 0%,transparent 50%),var(--d);min-height:100vh}
+.c{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--p),var(--o));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nl{display:flex;gap:32px;list-style:none}
+.nl a{color:var(--g);text-decoration:none;font-size:.95rem}
+.services{padding:100px 0}
+.sl{color:var(--p);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;text-align:center}
+.st{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:12px}
+.ss{color:var(--g);text-align:center;max-width:560px;margin:0 auto 56px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{background:var(--ds);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.05);transition:all .3s}
+.svc:hover{border-color:var(--p);transform:translateY(-4px)}
+.svc-icon{width:52px;height:52px;background:rgba(37,99,235,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
+.svc h3{font-size:1.1rem;margin-bottom:10px}
+.svc p{color:var(--g);font-size:.9rem}
+.work{padding:100px 0;border-top:1px solid rgba(255,255,255,.05)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work-card{background:var(--ds);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:all .3s;cursor:pointer}
+.work-card:hover{transform:translateY(-4px);border-color:var(--o)}
+.work-img{height:180px;background:linear-gradient(135deg,var(--p),var(--o));display:flex;align-items:center;justify-content:center;font-size:2rem;color:rgba(255,255,255,.5)}
+.work-body{padding:20px}
+.work-body .tag{color:var(--o);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.work-body h3{font-size:1rem;margin-top:6px}
+.clients{padding:60px 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.clients-grid{display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:32px}
+.client-logo{color:var(--g);font-size:1.2rem;font-weight:700;opacity:.4}
+.pricing{padding:100px 0}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto}
+.pc{background:var(--ds);border-radius:16px;padding:40px 32px;border:1px solid rgba(255,255,255,.05);text-align:center;position:relative}
+.pc.pop{border-color:var(--p)}
+.pc.pop::before{content:"Most Popular";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--p);color:white;padding:4px 16px;border-radius:50px;font-size:.75rem;font-weight:600}
+.pc h3{color:var(--g);font-size:.85rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.pc .pr2{font-size:2.8rem;font-weight:800;margin-bottom:4px}
+.pc .pr2 span{font-size:1rem;color:var(--g);font-weight:400}
+.pc .per{color:var(--g);font-size:.85rem;margin-bottom:28px}
+.pfl{list-style:none;text-align:left;margin-bottom:28px}
+.pfl li{padding:8px 0;color:var(--g);font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.pfl li::before{content:"Y ";color:var(--grn);font-weight:600}
+.pcta{display:block;background:var(--p);color:white;padding:13px;border-radius:10px;text-decoration:none;font-weight:600;text-align:center}
+.cta{padding:100px 0;text-align:center}
+.cta h2{font-size:2.5rem;font-weight:700;margin-bottom:16px}
+.cta p{color:var(--g);margin-bottom:32px;font-size:1.1rem}
+footer{border-top:1px solid rgba(255,255,255,.05);padding:40px 0}
+footer .c{display:flex;justify-content:space-between;align-items:center}
+footer p{color:var(--g);font-size:.85rem}
+footer a{color:var(--g);text-decoration:none;margin-left:24px;font-size:.85rem}
+footer a:hover{color:var(--l)}
+@media(max-width:768px){.hero h1{font-size:2.5rem}.svc-grid{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.nl{display:none}}
+</style></head><body>
+<div class=bg>
+<div class=c>
+<nav><div class=logo>PixelCraft</div>
+<ul class=nl><li><a href=#>Services</a></li><li><a href=#>Work</a></li><li><a href=#>Pricing</a></li><li><a href=#>About</a></li></ul>
+<a href=# class=nc>Start a Project</a></nav>
+<section class=hero>
+<h1>We build digital<br><span>experiences</span></h1>
+<p>Full-service digital agency crafting websites, brands, and apps that drive growth. Trusted by 200+ startups worldwide.</p>
+<div class=hb><a href=# class=bp>View Our Work</a><a href=# class=bs>Get a Quote</a></div>
+</section>
+</div>
+<section class=services>
+<div class=c>
+<p class=sl>What We Do</p><h2 class=st>Services built for growth</h2><p class=ss>We combine strategy, design, and technology to build products people love.</p>
+<div class=svc-grid>
+<div class=svc><div class=svc-icon>Web</div><h3>Web Development</h3><p>Fast, scalable web apps and sites built with modern tech stacks. React, Next.js, Node.</p></div>
+<div class=svc><div class=svc-icon>Design</div><h3>UI/UX Design</h3><p>User-centered design that converts. From wireframes to pixel-perfect interfaces.</p></div>
+<div class=svc><div class=svc-icon>Brand</div><h3>Brand Identity</h3><p>Logos, guidelines, and brand systems that make your business memorable.</p></div>
+<div class=svc><div class=svc-icon>Mobile</div><h3>Mobile Apps</h3><p>Native and cross-platform apps for iOS and Android that users love.</p></div>
+<div class=svc><div class=svc-icon>SEO</div><h3>SEO and Marketing</h3><p>Data-driven marketing strategies that bring organic traffic and conversions.</p></div>
+<div class=svc><div class=svc-icon>Support</div><h3>Ongoing Support</h3><p>24/7 maintenance, updates, and optimization to keep your product sharp.</p></div>
+</div>
+</div>
+</section>
+<section class=work>
+<div class=c>
+<p class=sl>Our Work</p><h2 class=st>Selected projects</h2>
+<div class=work-grid>
+<div class=work-card><div class=work-img>FinTech App</div><div class=work-body><div class=tag>FinTech</div><h3>Finance Dashboard</h3></div></div>
+<div class=work-card><div class=work-img style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">E-Commerce</div><div class=work-body><div class=tag>E-Commerce</div><h3>Luxury Fashion Store</h3></div></div>
+<div class=work-card><div class=work-img style="background:linear-gradient(135deg,#14b8a6,#10b981)">SaaS</div><div class=work-body><div class=tag>SaaS</div><h3>Product Analytics Tool</h3></div></div>
+<div class=work-card><div class=work-img style="background:linear-gradient(135deg,#f97316,#f59e0b)">Health</div><div class=work-body><div class=tag>Health</div><h3>Fitness Tracking App</h3></div></div>
+<div class=work-card><div class=work-img style="background:linear-gradient(135deg,#06b6d4,#2563eb)">EdTech</div><div class=work-body><div class=tag>EdTech</div><h3>Learning Platform</h3></div></div>
+<div class=work-card><div class=work-img style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">Social</div><div class=work-body><div class=tag>Social</div><h3>Community App</h3></div></div>
+</div>
+</div>
+</section>
+<section class=clients>
+<div class=c>
+<p class=sl>Trusted by</p>
+<div class=clients-grid>
+<div class=client-logo>STRIPE</div><div class=client-logo>NOTION</div><div class=client-logo>VERCEL</div><div class=client-logo>LINE</div><div class=client-logo>DESK</div><div class=client-logo>FIGMA</div>
+</div>
+</div>
+</section>
+<section class=pricing>
+<div class=c>
+<p class=sl>Pricing</p><h2 class=st>Transparent pricing</h2><p class=ss>No hidden fees. Clear scope. Delivered on time.</p>
+<div class=pg>
+<div class=pc><h3>Landing Page</h3><div class=pr2>$999<span>/project</span></div><p class=per>Starting from</p><ul class=pfl><li>5 page designs</li><li>Responsive development</li><li>Basic SEO</li><li>1 month support</li></ul><a href=# class=pcta>Get Started</a></div>
+<div class="pc pop"><h3>Full Website</h3><div class=pr2>$3,999<span>/project</span></div><p class=per>Starting from</p><ul class=pfl><li>10 page designs</li><li>CMS integration</li><li>Advanced SEO</li><li>3 months support</li></ul><a href=# class=pcta>Get Started</a></div>
+<div class=pc><h3>Custom App</h3><div class=pr2>$9,999<span>/project</span></div><p class=per>Starting from</p><ul class=pfl><li>Full design system</li><li>Web or mobile app</li><li>Backend and API</li><li>6 months support</li></ul><a href=# class=pcta>Get Started</a></div>
+</div>
+</div>
+</section>
+<section class=cta><div class=c><h2>Ready to start your project?</h2><p>Book a free 30-minute discovery call</p><a href=# class=bp>Book a Call</a></div></section>
+<footer><div class=c><p>2026 PixelCraft. All rights reserved.</p><div><a href=#>Privacy</a><a href=#>Terms</a><a href=#>Twitter</a></div></div></footer>
+</div>
+</body></html>
